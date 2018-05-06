@@ -12,6 +12,7 @@
 
 #import "RCTARKitDelegate.h"
 #import "RCTARKitNodes.h"
+@import ARVideoKit;
 
 typedef void (^RCTBubblingEventBlock)(NSDictionary *body);
 typedef void (^RCTARKitResolve)(id result);
@@ -32,6 +33,7 @@ typedef void (^RCTARKitReject)(NSString *code, NSString *message, NSError *error
 
 #pragma mark - Properties
 @property (nonatomic, strong) ARSCNView *arView;
+@property (nonatomic, strong) RecordAR *recorder;
 @property (nonatomic, strong) RCTARKitNodes *nodeManager;
 
 @property (nonatomic, assign) BOOL debug;
